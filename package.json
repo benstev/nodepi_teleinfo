@@ -1,0 +1,10 @@
+{
+  "name": "teleinfoNode",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "teleinfo": "*",
+    "mqtt": "~0.3.7",
+	"log4js": "*"
+  }
+}

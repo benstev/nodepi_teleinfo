@@ -1,0 +1,25 @@
+{
+    "logging_level": "INFO",
+    "serial_port": "/dev/ttyUSB0",
+	
+	"teleinfo": {
+		"status_topic": "/marquis/teleinfo/onoff/status",
+		"command_topic": "/marquis/teleinfo/onoff/command",
+
+		"topic": "/marquis/teleinfo/live",
+		"fields": ["IINST", "BASE", "PAPP", "IMAX"],
+	
+		"summary_fields": {
+			"PAPP": {"func": "avg", "topic": "/marquis/teleinfo/papp"},
+			"IINST": {"func": "avg", "topic": "/marquis/teleinfo/iinst"},
+			"BASE": {"func": "max", "topic": "/marquis/teleinfo/base"}
+		},
+		"integration_seconds": 60
+	},
+
+	"mqtt": {
+		"client_id": "teleinfo2mqtt",
+		"host": "192.168.0.7",
+		"port": 1883
+	}
+}

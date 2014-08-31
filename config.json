@@ -10,10 +10,11 @@
 		"fields": ["IINST", "BASE", "PAPP", "IMAX"],
 	
 		"summary_fields": {
-			"PAPP": {"func": "avg", "topic": "/marquis/teleinfo/papp"},
-			"IINST": {"func": "avg", "topic": "/marquis/teleinfo/iinst"},
-			"BASE": {"func": "max", "topic": "/marquis/teleinfo/base"}
+			"PAPP": {"func": "avg"},
+			"IINST": {"func": "avg"},
+			"BASE": {"func": "max"}
 		},
+		"summary_topic": "/marquis/teleinfo/minute",
 		"integration_seconds": 60
 	},
 

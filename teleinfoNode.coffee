@@ -74,14 +74,15 @@ resetIntegral= () ->
 
 sendIntegral = () ->
 	if sending and sampleCnt > 0
+		m = {}
 		for field, f of config.teleinfo.summary_fields
 			if f.func == 'avg'
-				v = intRes[field] / sampleCnt
+				m[field] = intRes[field] / sampleCnt
 			else
-				v = intRes[field]
-			astr = JSON.stringify(v)
-			log.debug util.format('SEND INTEGRAL <%s> to topic <%s>', astr, f.topic)
-			mqtt.publish f.topic, astr
+				m[field] = intRes[field]
+		astr = JSON.stringify(m)
+		log.debug util.format('SEND INTEGRAL <%s> to topic <%s>', astr, config.teleinfo.summary_topic)
+		mqtt.publish config.teleinfo.summary_topic, astr
 	resetIntegral()
 	
 resetIntegral()

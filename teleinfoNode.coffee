@@ -37,7 +37,7 @@ trameEvents.on 'error', (err) ->
 
 
 log.info util.format('Connecting to mqtt <%s:%s>', config.mqtt.host, config.mqtt.port)
-mqtt = require('mqtt').createClient(config.mqtt.port, config.mqtt.host);
+mqtt = require('mqtt').createClient(config.mqtt.port, config.mqtt.host, config.mqtt.options);
 
 mqtt.on 'connect', ->
 	log.info 'mqtt connected!'

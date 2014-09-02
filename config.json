@@ -19,8 +19,13 @@
 	},
 
 	"mqtt": {
-		"client_id": "teleinfo2mqtt",
-		"host": "192.168.0.7",
-		"port": 1883
+		"host": "<host>",
+		"port": <port>,
+		"options":
+		{
+			"clientId": "teleinfo2mqtt",
+			"username": "<username here>",
+			"password": "<password here>"
+		}
 	}
 }

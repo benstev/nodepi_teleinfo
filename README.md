@@ -1,6 +1,6 @@
 # nodepi/teleinfoNode
 
-nodepi is a set of node.js daemons running on a Raspberry Pi that will acquire various parameters for home automation
+nodepi is a set of node.js daemons running on a Raspberry Pi that will acquire various sensors from home automation
 and publish them onto an MQTT broker
 
 teleinfoNode acquires various parameters from the EDF electricity meter reading ("télé-information")
@@ -18,10 +18,12 @@ Edit the config.js file.
 
 ### topics
 2 topics need to be configured:
-* "topic" 
+* "topic"
+ 
 to collect the real-time readings (approx. 1 per second)
 * "summary_topic" 
-to collect the 1 averages readings on a slower (configurable) pace
+
+to collect the averaged readings on a slower (configurable) pace
 
 ### teleinfo fields 
 * raw values

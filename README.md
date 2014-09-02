@@ -27,12 +27,14 @@ to collect the averaged readings on a slower (configurable) pace
 
 ### teleinfo fields 
 * raw values
+
 "fields" holds the list of considered fields from the teleinfo.
 * averaged values
+
 "summary_fields" holds the list of averaged fields and the aggregation function (currently "avg" or "max" onmy implemenented).
 
 ## Running it
 
-Usually run with forever
+Usually run with [forever] (https://github.com/nodejitsu/forever)
 
 
